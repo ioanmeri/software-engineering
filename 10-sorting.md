@@ -10,6 +10,10 @@ Contents:
 
 [Bubble Sort: BIG O Complexity](#bubble-sort-big-o-complexity)
 
+[Selection Sort](#selection-sort)
+
+[Selection Sort: Big O Complexity](#selection-sort-big-o-complexity)
+
 ## Introduction to Sorting Algorithms
 
 **What is sorting?**
@@ -142,3 +146,38 @@ if data is nearly sorted or already sorted, with noSwap optimization is more lik
 ## Selection Sort
 
 Similar to bubble sort, but instead of first placing large values into sorted position, it places small values into sorted position
+
+**Passing 1**
+
+```
+[5, 3, 4, 1, 2] // min 5
+[5, 3, 4, 1, 2] // min 3
+[5, 3, 4, 1, 2] // min 3
+[5, 3, 4, 1, 2] // min 1
+[5, 3, 4, 1, 2] // min 1
+[1, 3, 4, 5, 2] // swap with what started with
+```
+
+Find the minimum, swap at the end, and put it at the beginning
+
+We' are going through and select the minimum, and putting it at the beginning.
+
+**Selection Sort Pseudocode**
+
+- Store the first element as the smallest value you've seen so far.
+- Compare this item to the next item in the array until you find a smaller number.
+- if a smaller number is found, designate that smaller number to be the new "minimum" and continue until the end of the array.
+- if the "minimum" is not the value (index) you initially began with, swap the two values.
+- Repeat this with the next element until the array is sorted.
+
+---
+
+## Selection Sort: Big O Complexity
+
+**O(n^2)**
+
+When selection sort, potentially, is better than bubble sort, it's (one scenario) when you want to minimize the number of swaps.
+
+When worrying about writing in memory, not very common.
+
+---

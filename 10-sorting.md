@@ -14,6 +14,12 @@ Contents:
 
 [Selection Sort: Big O Complexity](#selection-sort-big-o-complexity)
 
+[Insertion Sort](#insertion-sort)
+
+[Insertion Sort: BIG O Complexity](#insertion-sort-big-o-complexity)
+
+[Comparing Bubble, Selection, and Insertion Sort](#comparing-bubble-selection-and-insertion-sort)
+
 ## Introduction to Sorting Algorithms
 
 **What is sorting?**
@@ -179,5 +185,52 @@ We' are going through and select the minimum, and putting it at the beginning.
 When selection sort, potentially, is better than bubble sort, it's (one scenario) when you want to minimize the number of swaps.
 
 When worrying about writing in memory, not very common.
+
+---
+
+## Insertion Sort
+
+Builds up the sort by gradually creating a larger left half (portion better than half) which is always sorted.
+
+```
+[5, 3, 4, 1, 2]
+
+[3, 5, 4, 1, 2]
+
+[3, 4, 5, 1, 2]
+
+[1, 3, 4, 5, 2]
+
+[1, 2, 3, 4, 5]
+```
+
+We are taking an element one at a time, and inserting it in the correct spot
+
+**Insertion Sort Pseudocode**
+
+- Start by picking the second element in the array
+- Now compare the second element with the one before it and swap if necessary
+- Continue to the next element and if it is in the incorrect order, iterate through the sorted portion (i.e. the left side) to place the element in the correct place
+- Repeat until the array is sorted.
+
+---
+
+## Insertion Sort: BIG O Complexity
+
+Similar to the other two. Worst case it's quadratic: **O(n^2)**
+
+But if the data it's almost sorted the insertion sort performs well.
+
+Another thing that Insertion sort is good is for **online algorithms**, which is an **algorithm that can work as data is coming in**
+
+---
+
+## Comparing Bubble, Selection, and Insertion Sort
+
+| Algorithm      | Time Complexity (Best) | Time Complexity (Average) | Time Complexity (Worst) | Space Complexity |
+| -------------- | ---------------------- | ------------------------- | ----------------------- | ---------------- |
+| Bubble Sort    | O(n)                   | O(n^2)                    | O(n^2)                  | O(1)             |
+| Insertion Sort | O(n)                   | O(n^2)                    | O(n^2)                  | O(1)             |
+| Selection Sort | O(n^2)                 | O(n^2)                    | O(n^2)                  | O(1)             |
 
 ---

@@ -24,6 +24,10 @@ Contents:
 
 [Merge Sort BIG O Complexity](#merge-sort-big-o-complexity)
 
+[Quick Sort](#quick-sort)
+
+[Quick Sort Big O Complexity](#quick-sort-big-o-complexity)
+
 ## Introduction to Sorting Algorithms
 
 **What is sorting?**
@@ -375,5 +379,28 @@ arr;
   - If the pivot is greater than the current element, increment the pivot index variable and then swap the current element with the element at the pivot index
 - Swap the starting element (i.e. the pivot) with the pivot index
 - Return the pivot index
+
+**Quicksort Pseudocode**
+
+- Call the pivot helper on the array
+- When the helper returns to you the updated pivot index, recursively cal the pivot helper on the subarray to the left of that index, and the subarray to the right of that index
+- Your base case occurs when you consider a subarray with less than 2 elements
+
+---
+
+## Quick Sort Big O Complexity
+
+| Time Complexity (Best) | Time Complexity (Average) | Time Complexity (Worst) | Space Complexity |
+| ---------------------- | ------------------------- | ----------------------- | ---------------- |
+| O(n log n)             | O(n log n)                | O (n^2)                 | O (log n)        |
+
+Worst case when data already sorted and needed:
+
+O(n) decompositions
+O(n) comparisons
+
+---
+
+o(n^2)
 
 ---

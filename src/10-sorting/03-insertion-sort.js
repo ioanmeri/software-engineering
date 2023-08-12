@@ -1,7 +1,3 @@
-const swap = (arr, idx1, idx2) => {
-  [arr[idx1], arr[idx2]] = [arr[idx2], arr[idx1]];
-};
-
 function insertionSort(arr) {
   for (var i = 1; i < arr.length; i++) {
     var currentVal = arr[i];

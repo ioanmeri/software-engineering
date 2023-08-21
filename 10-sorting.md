@@ -28,6 +28,8 @@ Contents:
 
 [Quick Sort Big O Complexity](#quick-sort-big-o-complexity)
 
+[Radix Sort](#radix-sort)
+
 ## Introduction to Sorting Algorithms
 
 **What is sorting?**
@@ -402,5 +404,76 @@ O(n) comparisons
 ---
 
 o(n^2)
+
+---
+
+## Radix Sort
+
+There are other types of sorting algorithms, that are not comparison algorithms which they take advantage of special properties of the data (e.g. integer sorting)
+
+**Radix sort** is a special sorting algorithm that works on lists on **numbers**
+
+It never makes comparisons between elements!
+
+It exploits the fact that information about the size of a number is encoded in the number of digits.
+
+More digits means a bigger number!
+
+**How does it work**?
+
+```
+[1556, 4, 3556, 592, 408, 4386, 902, 7, 8257, 86, 9637, 29]
+```
+
+we create 10 buckets, which represent all of the possible numbers in base 10
+
+and we go through the list of numbers and based on the first digit in the number, in the right side, and we group them in the buckets
+
+| 0   | 1   | 2   | 3   | 4   | 5   | 6    | 7    | 8   | 9   |
+| --- | --- | --- | --- | --- | --- | ---- | ---- | --- | --- |
+|     |     |     |     |     |     | 86   |      |     |     |
+|     |     |     |     |     |     | 4386 | 9637 |     |     |
+|     |     |     |     |     |     | 3556 | 8157 |     |     |
+|     |     | 902 | 593 | 4   |     | 1556 | 7    | 408 | 29  |
+
+```
+[902, 593, 4, 1556, 3556, 4386, 86, 7, 8157, 9637, 408, 29]
+```
+
+now we repeat the process for the second digit from the right side:
+
+| 0   | 1   | 2   | 3    | 4   | 5    | 6   | 7   | 8    | 9   |
+| --- | --- | --- | ---- | --- | ---- | --- | --- | ---- | --- |
+| 408 |     |     |      |     |      |     |     |      |     |
+| 7   |     |     |      |     | 8157 |     |     |      |     |
+| 4   |     |     |      |     | 3556 |     |     | 86   |     |
+| 902 |     | 29  | 9637 | 4   | 1556 |     |     | 4386 | 593 |
+
+and we repeat it again for the 3rd digit:
+
+```
+[902, 4, 7, 408, 29, 9637, 1556, 3556, 8157, 4386, 86, 593]
+```
+
+| 0   | 1    | 2   | 3    | 4   | 5    | 6    | 7   | 8   | 9   |
+| --- | ---- | --- | ---- | --- | ---- | ---- | --- | --- | --- |
+| 86  |      |     |      |     |      |      |     |     |     |
+| 29  |      |     |      |     | 593  |      |     |     |     |
+| 7   |      |     |      |     | 3556 |      |     |     |     |
+| 4   | 8157 |     | 4386 | 408 | 1556 | 9637 |     |     | 902 |
+
+and we reform it to the list again, one more time:
+
+the number of times depends on how many digits the largest number has (4 times here)
+
+| 0   | 1    | 2   | 3    | 4    | 5   | 6   | 7   | 8    | 9    |
+| --- | ---- | --- | ---- | ---- | --- | --- | --- | ---- | ---- |
+| 902 |      |     |      |      |     |     |     |      |      |
+| 593 |      |     |      |      |     |     |     |      |      |
+| 408 |      |     |      |      |     |     |     |      |      |
+| 86  |      |     |      |      |     |     |     |      |
+| 29  |      |     |      |      |     |     |     |      |      |
+| 7   |      |     |      |      |     |     |     |      |      |
+| 4   | 1556 |     | 3556 | 4386 |     |     |     | 8157 | 9637 |
 
 ---

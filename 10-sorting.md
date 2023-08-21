@@ -22,13 +22,15 @@ Contents:
 
 [Merge Sort](#merge-sort)
 
-[Merge Sort BIG O Complexity](#merge-sort-big-o-complexity)
+[Merge Sort Big O Complexity](#merge-sort-big-o-complexity)
 
 [Quick Sort](#quick-sort)
 
 [Quick Sort Big O Complexity](#quick-sort-big-o-complexity)
 
 [Radix Sort](#radix-sort)
+
+[Radix Sort Big O Complexity](#radix-sort-big-o-complexity)
 
 ## Introduction to Sorting Algorithms
 
@@ -542,3 +544,16 @@ function mostDigits(nums){
   - place each number in the corresponding bucket based on its kth digit
 - Replace our existing array with values in our buckets, starting with 0 and going up to 9
 - return list at the end!
+
+---
+
+## Radix Sort Big O Complexity
+
+| Time Complexity (Best) | Time Complexity (Average) | Time Complexity (Worst) | Space Complexity |
+| ---------------------- | ------------------------- | ----------------------- | ---------------- |
+| O(nk)                  | O(nk)                     | O (nk)                  | O (n + k)        |
+
+- n: length of array
+- k: number of digits(average)
+
+---

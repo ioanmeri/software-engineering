@@ -24,6 +24,8 @@ Doubly Linked Lists
 
 Stacks
 
+---
+
 ## Introduction
 
 **What do they do?**
@@ -80,3 +82,58 @@ class Student {
 The method to create new objects **must** be called constructor
 
 The class keyword creates a constant, so you can not redefine it. Watch out for the syntax as well!
+
+**Creating objects from classes**
+
+We use the **new** keyword
+
+```
+let firstStudent = new Student("Colt", "Steele");
+let secondStudent = new Student("Blue", "Steele");
+```
+
+**Instance Methods**
+
+Relevant to individual instances
+
+```
+class Student {
+  constructor(firstName, lastName){
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.tardies = 0;
+    this.scores = [];
+  }
+
+  fullName(){
+    return `Your full name is ${this.firstName} ${this.lastName}`;
+  }
+
+  markLate(){
+    this.tardies += 1;
+    if(this.tardies >= 3){
+      return "YOU ARE EXPELLED!!!"
+    }
+    return `${this.firstName} ${this.lastName} has been late ${this.tardies} times`;
+  }
+
+  addScore(score){
+    this.scores.push(score)
+    return this.scores;
+  }
+
+  calculateAverage(){
+    let sum = this.scores.reduce(function(a,b){return a+b});
+    return sum/this.scores.length;
+  }
+}
+
+let firstName = new Student('Colt', 'Steele');
+
+firstStudent.fullName();
+firstStudent.markLate();
+firstStudent.markLate();
+firstStudent.addScore(92);
+firstStudent.addScore(87);
+firstStudent.scores // [92, 87]
+```

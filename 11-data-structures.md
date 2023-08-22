@@ -136,4 +136,36 @@ firstStudent.markLate();
 firstStudent.addScore(92);
 firstStudent.addScore(87);
 firstStudent.scores // [92, 87]
+firstStudent.calculateAverage();
 ```
+
+**Class Methods**
+
+Using the `static` keyword in front of the definition. It's a utility function not related to single instances.
+
+```
+class Student {
+  constructor(firstName, lastName){
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+
+  fullName(){
+    return `Your full name is ${this.firstName} ${this.lastName}`;
+  }
+
+  static enrollStudents(...students){
+    // maybe send an email here
+  }
+}
+```
+
+```
+Student.enrollStudents([firstStudent, secondStudent])
+```
+
+**One gotcha with `this`**
+
+Inside all of our **instance** methods and **constructor**, the keyword `this` refers to the object created from that class (also known as **instance**)
+
+---

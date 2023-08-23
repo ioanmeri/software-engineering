@@ -6,11 +6,11 @@
 
 [ES2015 Class Syntax](#es2015-class-syntax)
 
+[Singly Linked Lists](#singly-linked-lists)
+
 Binary Search Trees
 
 Queues
-
-Singly Linked Lists
 
 Undirected Unweighted Graphs
 
@@ -28,15 +28,19 @@ Stacks
 
 ## Introduction
 
-**What do they do?**
+### What do they do?
 
 Data structures are collections of values, the relationships among them, and the functions or operations that can be applied to the data.
 
-**Why so many?**
+---
+
+### Why so many?
 
 Different data structures excel at different things. Some are highly specialized, while others (like arrays) are more generally used.
 
-**Why care?**
+---
+
+### Why care?
 
 The more time you spend as a developer, the more likely you'll need to use one of these data structures
 
@@ -56,15 +60,15 @@ Web scraping nested HTML? Use a tree!
 
 Need to write a scheduler? Use a binary heap!
 
----
-
 ## ES2015 Class Syntax
 
-**What is a class?**
+### What is a class?
 
 A blueprint for creating objects with pre-defined properties and methods
 
-**Why do we need to learn this?**
+---
+
+### Why do we need to learn this?
 
 We're going to implement **data structures** as **classes**!
 
@@ -83,7 +87,9 @@ The method to create new objects **must** be called constructor
 
 The class keyword creates a constant, so you can not redefine it. Watch out for the syntax as well!
 
-**Creating objects from classes**
+---
+
+### Creating objects from classes
 
 We use the **new** keyword
 
@@ -92,7 +98,9 @@ let firstStudent = new Student("Colt", "Steele");
 let secondStudent = new Student("Blue", "Steele");
 ```
 
-**Instance Methods**
+---
+
+### Instance Methods
 
 Relevant to individual instances
 
@@ -139,7 +147,9 @@ firstStudent.scores // [92, 87]
 firstStudent.calculateAverage();
 ```
 
-**Class Methods**
+---
+
+### Class Methods
 
 Using the `static` keyword in front of the definition. It's a utility function not related to single instances.
 
@@ -164,8 +174,45 @@ class Student {
 Student.enrollStudents([firstStudent, secondStudent])
 ```
 
-**One gotcha with `this`**
+---
+
+### One gotcha with `this`
 
 Inside all of our **instance** methods and **constructor**, the keyword `this` refers to the object created from that class (also known as **instance**)
+
+## Singly Linked Lists
+
+### What is a linked list?
+
+A data structure that contains a **head**, **tail**, and **length** property.
+
+Linked Lists consists of nodes, and each **node** has a **value** and a **pointer** to another node or null
+
+---
+
+### Comparisons with Arrays
+
+**Lists**
+
+- Do not have indexes!
+- Connected via nodes with a **next** pointer
+- Random access is not allowed
+
+**Arrays**
+
+- Indexed in order!
+- Insertion and deletion can be expensive
+- Can quickly be accessed at a specific index
+
+---
+
+### Pushing pseudocode
+
+- This function should accept a value
+- Create a new node using the value passed to the function
+- If there is no head property on the list, set the head and tail to be the newly created node
+- Otherwise set the next property on the tail to be the new node and set the tail property on the list to be the newly created node
+- Increment the length by one
+- Return the linked list
 
 ---

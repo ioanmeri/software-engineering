@@ -70,7 +70,7 @@ Let's see what we mean by that!
 
 `push` and `pop` **always faster** than `shift` and `unshift`
 
-## Big O of Array Operations
+### Big O of Array Operations
 
 - push: O(1)
 - pop: O(1)

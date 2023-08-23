@@ -60,6 +60,8 @@ Web scraping nested HTML? Use a tree!
 
 Need to write a scheduler? Use a binary heap!
 
+---
+
 ## ES2015 Class Syntax
 
 ### What is a class?
@@ -180,6 +182,8 @@ Student.enrollStudents([firstStudent, secondStudent])
 
 Inside all of our **instance** methods and **constructor**, the keyword `this` refers to the object created from that class (also known as **instance**)
 
+---
+
 ## Singly Linked Lists
 
 ### What is a linked list?
@@ -214,5 +218,38 @@ Linked Lists consists of nodes, and each **node** has a **value** and a **pointe
 - Otherwise set the next property on the tail to be the new node and set the tail property on the list to be the newly created node
 - Increment the length by one
 - Return the linked list
+
+---
+
+### Popping
+
+Removing a **node** from the end of the Linked List!
+
+---
+
+### Popping pseudocode
+
+- if there are no nodes in the list, return undefined
+- Loop through the list until you reach the tail
+- Set the next property of the 2nd to last node to be null
+- Set the tail to be the 2nd to last node
+- Decrement the length of the list by 1
+- Return the value of the node removed
+
+---
+
+### Shifting
+
+Removing a new **node** from the beginning of the Linked List!
+
+---
+
+### Shifting pseudocode
+
+- if there are no nodes, return undefined
+- Store the current head property in a variable
+- Set the head property to be the current head's next property
+- Decrement the length by 1
+- Return the value of the node removed
 
 ---

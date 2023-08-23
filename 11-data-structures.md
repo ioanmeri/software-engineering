@@ -253,3 +253,35 @@ Removing a new **node** from the beginning of the Linked List!
 - Return the value of the node removed
 
 ---
+
+### Unshifting
+
+Adding a new **node** to the beginning of the Linked List!
+
+---
+
+### Unshifting pseudocode
+
+- This function should accept a value
+- Create a new node using the value passed to the function
+- If there is no head property on the list, set the head and tail to be the newly created node
+- Otherwise set the newly created node's next property to be the current head property on the list
+- Set the head property on the list to be that newly created node
+- Increment the length of the list by 1
+- Return the linked list
+
+---
+
+### Get
+
+Retrieving a **node** by it's position in the Linked List!
+
+---
+
+### Get Pseudocode
+
+- This function should accept an index
+- if the index is less than zero or greater than or equal to the length of the list, return null
+- Loop through the list until you reach the index and return the node at that specific index
+
+---

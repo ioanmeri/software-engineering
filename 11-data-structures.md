@@ -319,3 +319,21 @@ Adding a node to the Linked List as a **specific position**
 - Return true
 
 ---
+
+### Remove
+
+Removing a node from the Linked List at a **specific** position
+
+---
+
+### Remove pseudocode
+
+- if the index is less than zero or greater or equal than the length, return undefined
+- if the index is the same as the length - 1, pop
+- if the index is 0, shift
+- Otherwise, using the **get** method, access the node at the index -1
+- Set the next property on that node to be the next of the next node
+- Decrement the length
+- Return the value of the node removed
+
+---

@@ -285,3 +285,37 @@ Retrieving a **node** by it's position in the Linked List!
 - Loop through the list until you reach the index and return the node at that specific index
 
 ---
+
+### Set
+
+Changing the **value** of a node based on it's position in the Linked List
+
+---
+
+### Set pseudocode
+
+- This function should accept a value and an index
+- Use your **get** function to find the specific node.
+- if the node is not found, return false
+- if the node is found, set the value of that node to be the value passed to the function and return true
+
+---
+
+### Insert
+
+Adding a node to the Linked List as a **specific position**
+
+---
+
+### Insert pseudocode
+
+- if the index is less than zero or greater than the length, return false
+- if the index is the same as the length, push a new node to the end of the list
+- if the index is 0, unshift a new node to the start of the list
+- Otherwise, using the **get** method, access the node at the index -1
+- Set the next property on that node to be the new node
+- Set the next property on the new node to be the previous next
+- Increment the length
+- Return true
+
+---

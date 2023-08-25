@@ -405,3 +405,55 @@ Adding a node to the \*\*end of the Doubly Linked List
 - Return the Doubly Linked List
 
 ---
+
+### Popping
+
+Removing a node from the **end** of the Doubly Linked List.
+
+#### Popping pseudocode
+
+- if there is no head, return undefined
+- Store the current tail in a variable to return later
+- if the length is 1, set the head and tail to be null
+- Update the tail to be the previous Node
+- Set the newTail's next to null
+- Decrement the length
+- Return the value removed
+
+---
+
+### Shifting
+
+Removing a node from the **beginning** of the Doubly Linked List.
+
+- if length is 0, return undefined
+- Store the current head property in a variable (we'll call it old head)
+- if the length is one
+  - set the head to be null
+  - set the tail to be null
+- Update the head to be the next of the old head
+- Set the head's prev property to null
+- Set the old head's next to null
+- Decrement the length
+- Return the old head
+
+---
+
+### Unshifting
+
+Adding a node to the **beginning** of the Doubly Linked List
+
+#### Unshifting pseudocode
+
+- Create a new node with the value passed to the function
+- if the length is 0
+  - set the head to be the new node
+  - set the tail to be the new node
+- Otherwise
+  - set the prev property on the head of the list to be the new node
+  - set the next property on the new node to be the head property
+  - update the head to be the new node
+- increment the length
+- Return the list
+
+---

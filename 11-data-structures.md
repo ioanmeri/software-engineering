@@ -210,7 +210,11 @@ Linked Lists consists of nodes, and each **node** has a **value** and a **pointe
 
 ---
 
-### Pushing pseudocode
+### Pushing
+
+Adding a node to the \*\*end of the Single Linked List
+
+#### Pushing pseudocode
 
 - This function should accept a value
 - Create a new node using the value passed to the function
@@ -225,9 +229,7 @@ Linked Lists consists of nodes, and each **node** has a **value** and a **pointe
 
 Removing a **node** from the end of the Linked List!
 
----
-
-### Popping pseudocode
+#### Popping pseudocode
 
 - if there are no nodes in the list, return undefined
 - Loop through the list until you reach the tail
@@ -242,9 +244,7 @@ Removing a **node** from the end of the Linked List!
 
 Removing a new **node** from the beginning of the Linked List!
 
----
-
-### Shifting pseudocode
+#### Shifting pseudocode
 
 - if there are no nodes, return undefined
 - Store the current head property in a variable
@@ -258,9 +258,7 @@ Removing a new **node** from the beginning of the Linked List!
 
 Adding a new **node** to the beginning of the Linked List!
 
----
-
-### Unshifting pseudocode
+#### Unshifting pseudocode
 
 - This function should accept a value
 - Create a new node using the value passed to the function
@@ -276,9 +274,7 @@ Adding a new **node** to the beginning of the Linked List!
 
 Retrieving a **node** by it's position in the Linked List!
 
----
-
-### Get Pseudocode
+#### Get Pseudocode
 
 - This function should accept an index
 - if the index is less than zero or greater than or equal to the length of the list, return null
@@ -290,9 +286,7 @@ Retrieving a **node** by it's position in the Linked List!
 
 Changing the **value** of a node based on it's position in the Linked List
 
----
-
-### Set pseudocode
+#### Set pseudocode
 
 - This function should accept a value and an index
 - Use your **get** function to find the specific node.
@@ -305,9 +299,7 @@ Changing the **value** of a node based on it's position in the Linked List
 
 Adding a node to the Linked List as a **specific position**
 
----
-
-### Insert pseudocode
+#### Insert pseudocode
 
 - if the index is less than zero or greater than the length, return false
 - if the index is the same as the length, push a new node to the end of the list
@@ -324,9 +316,7 @@ Adding a node to the Linked List as a **specific position**
 
 Removing a node from the Linked List at a **specific** position
 
----
-
-### Remove pseudocode
+#### Remove pseudocode
 
 - if the index is less than zero or greater or equal than the length, return undefined
 - if the index is the same as the length - 1, pop
@@ -342,9 +332,7 @@ Removing a node from the Linked List at a **specific** position
 
 Reversing the Linked List **in place**!
 
----
-
-### Reverse pseudocode
+#### Reverse pseudocode
 
 - Swap the head and tail
 - Create a variable called next

@@ -8,6 +8,8 @@
 
 [Singly Linked Lists](#singly-linked-lists)
 
+[Doubly Linked Lists](#doubly-linked-lists)
+
 Binary Search Trees
 
 Queues
@@ -19,8 +21,6 @@ Binary Heaps
 Directed Graphs
 
 Hash Tables
-
-Doubly Linked Lists
 
 Stacks
 
@@ -375,5 +375,33 @@ Reversing the Linked List **in place**!
 - Singly Linked Lists are an excellent alternative to arrays when insertion and deletion at the beginning are frequently required
 - Array contain a built in index whereas Linked Lists do not
 - The idea of a list data structure that consists of nodes is the foundation for other data structures like Stacks and Queues
+
+---
+
+## Doubly Linked Lists
+
+**Almost** identical to Singly Linked Lists, except every node has **another** pointer, to the **previous** node!
+
+**Comparisons with Singly Linked Lists**
+
+More memory === More Flexibility
+
+It's **almost** always a tradeoff!
+
+---
+
+### Pushing
+
+Adding a node to the \*\*end of the Doubly Linked List
+
+#### Pushing pseudocode
+
+- Create a new node with the value passed to the function
+- If the head property is null set the head and tail to be the newly created node
+- If not, set the next property on the tail to be that node
+- Set the previous property on the newly created node to be the tail
+- Set the tail to be the newly created
+- Increment the length
+- Return the Doubly Linked List
 
 ---

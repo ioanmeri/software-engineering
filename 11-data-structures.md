@@ -473,3 +473,36 @@ Replacing the value of a node in a Double Linked List
   - Return true
 
 ---
+
+### Insert
+
+Adding a node in a Doubly Linked List by a certain position
+
+#### Insert pseudocode
+
+- if the index is less than zero or greater than or equal to the length return false
+- if the index is 0, **unshift**
+- in the index is the same as the length, **push**
+- use the **get** method to access the index -1
+- set the next and prev properties on the correct nodes to link everything together
+- increment the length
+- return true
+
+---
+
+### Remove
+
+Removing a node in a Doubly Linked List by a certain position.
+
+#### Remove pseudocode
+
+- if the index is less than zero or greater than or equal to the length return undefined
+- if the index is 0, **shift**
+- in the index is the same as the length -1, **pop**
+- use the **get** method to retrieve the item to be removed
+- update the next and prev properties to remove the found node from the list
+- set next and prev to nul on the found node
+- decrement the length
+- return the removed node
+
+---

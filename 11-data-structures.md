@@ -506,3 +506,22 @@ Removing a node in a Doubly Linked List by a certain position.
 - return the removed node
 
 ---
+
+### Big O of Doubly Linked Lists
+
+- Insertion: O(1)
+- Remove: O(1)
+- Searching: O(N)
+- Access: O(n)
+
+Technically searching is O(N/2) but that's still O(N)
+
+---
+
+### Recap
+
+- Doubly Linked Lists are almost identical to Singly Linked Lists except there is an additional pointer to previous nodes
+- Better than Singly Linked Lists for finding nodes and can be done in half the time!
+- However, they do take up more memory considering the extra pointer
+
+---

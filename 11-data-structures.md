@@ -445,3 +445,31 @@ Adding a node to the **beginning** of the Doubly Linked List
 - Return the list
 
 ---
+
+### Get
+
+Accessing a node in a Doubly Linked List by its position
+
+#### Get pseudocode
+
+- if the index is less than 0 or greater or equal to the length, return null
+- if the index is less than or equal to half the length of the list
+  - loop through the list starting from the head and loop towards the middle
+  - return the node once it is found
+- if the index is greater than half the length of the list
+  - loop through the list starting from the tail and loop towards the middle
+  - return the node once it is found
+
+---
+
+### Set
+
+Replacing the value of a node in a Double Linked List
+
+#### Set pseudocode
+
+- Create a variable which is the result of the **get** method at the index passed to the function
+  - if the **get**method returns a valid node, set the alue of tha node to be the valued passed to the function
+  - Return true
+
+---

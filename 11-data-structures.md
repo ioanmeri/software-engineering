@@ -10,6 +10,8 @@
 
 [Doubly Linked Lists](#doubly-linked-lists)
 
+[Stacks](#stacks)
+
 Binary Search Trees
 
 Queues
@@ -21,8 +23,6 @@ Binary Heaps
 Directed Graphs
 
 Hash Tables
-
-Stacks
 
 ---
 
@@ -523,5 +523,141 @@ Technically searching is O(N/2) but that's still O(N)
 - Doubly Linked Lists are almost identical to Singly Linked Lists except there is an additional pointer to previous nodes
 - Better than Singly Linked Lists for finding nodes and can be done in half the time!
 - However, they do take up more memory considering the extra pointer
+
+---
+
+## Stacks
+
+### What is a Stack?
+
+A **LIFO** data structure!
+
+The last element added to the stack will be the first element removed from the stack
+
+---
+
+### How is it used?
+
+This about a stack of **plates**, or a stack of **markers**, or a stack of... **anything**.
+
+As you pile it up the last thing (or the topmost thing) is what gets removed first.
+
+![Stack](img/ds-stacks-01.png)
+
+---
+
+### Where stack are used
+
+- The Call Stack!
+- Managing function invocations
+- Undo / Redo
+- Routing (the history object) is treated like a stack!
+- Trees / Graphs
+
+---
+
+There is more than one way of implementing a stack
+
+### Array implementation
+
+Using `push` and `pop` on a array, creates a stack (adding and removing from the end)
+
+```
+var stack = []
+
+stack.push("google")
+stack.push("instagram")
+stack.push("youtube")
+
+stack.pop()
+```
+
+or with `unshift` and `shift` (adding and removing from the beginning)
+
+```
+stack.unshift("create new file")
+stack.unshift("resized file")
+stack.unshift("cloned out wrinkle")
+
+stack.shift()
+```
+
+as we've seen the pop and push method is better because we don't have to re-index all the elements in the array
+
+but if you care about efficiency **you should use a linked list for a stack implementation**, because we don't access information based on an index
+
+---
+
+### Linked list implementation
+
+```
+class Node {
+  constructor(value) {
+    this.val = value;
+    this.next = null;
+  }
+}
+
+class Stack {
+  constructor() {
+    this.first = null;
+    this.last = null;
+    this.size = 0;
+  }
+}
+```
+
+Why cannot use the methods `push` and `pop` from the singly linked list, because they are not constant time! Had to traverse the whole list.
+
+how it's better to use `shift` and `unshift` (but should called `push` and `pop`)
+
+---
+
+### Pushing
+
+**Add** a value to the **top** of the stack!
+
+#### Pushing pseudocode
+
+- The function should accept a value
+- Create a new node with that value
+- If there are not nodes in the stack, set the first and last property to be the newly created node
+- if there is at least one node, create a variable that stores the current first property on the stack
+- reset the first property to be the newly created node
+- set the next property on the node to be the previously created variable
+
+---
+
+### Pop
+
+Removing and element from the top of the stack
+
+#### Pop pseudocode
+
+- if there are no nodes in the stack, return null
+- Create a temporary variable to store the first property on the stack
+- if there is only 1 node, set the first and last property to be null
+- if there is more than one node, set the first property to be the next property on the current first
+- decrement the size by 1
+- return the value of the node removed
+
+---
+
+### Big O of Stacks
+
+- Insertion: **O(1)**
+- Removal: **O(1)**
+- Searching - **O(N)**
+- Access - **O(N)**
+
+prioritizing insertion and removal, if you need searching and access maybe you should use another data structure like array.
+
+---
+
+### Recap
+
+- Stacks are a **LIFO** data structure where the last value in is always the first one out.
+- Stacks are used to handle function invocations (the call stack), for operations like undo / redo, and for routing (remember pages you have visited and go back / forwards) and much more!
+- They are not a built in data structure in JavaScript but are relatively simple to implement
 
 ---

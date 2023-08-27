@@ -661,3 +661,98 @@ prioritizing insertion and removal, if you need searching and access maybe you s
 - They are not a built in data structure in JavaScript but are relatively simple to implement
 
 ---
+
+## Queues
+
+A **FIFO** data structure!
+
+**F**irst **I**n **F**irst **O**ut
+
+### We've seen this before
+
+Queues exist everywhere! Think about the last time you waited in line...
+
+---
+
+### How do we use them in programming?
+
+- Background tasks
+- Uploading resources
+- Printing / Task processing
+
+---
+
+### Building a Queue with an array
+
+with `push` and `shift`
+
+```
+var q = [];
+
+q.push("FIRST");
+q.push("SECOND");
+q.push("THIRD");
+
+q.shift();
+q.shit();
+```
+
+or with the second way `unshift` with `pop`
+
+```
+q.unshift("FIRST")
+q.unshift("SECOND")
+q.unshift("THIRD")
+
+q.pop()
+q.pop()
+```
+
+---
+
+### Stack implementation with list
+
+With singly linked list, removing from the end using `pop` is slow, because you have to iterate over the entire list.
+
+We have to add to the end `enque` and remove from the beginning `deque`.
+
+### Enqueue pseudocode
+
+- This function accepts some value
+- Create a new node using that value passed to the function
+- if there are no nodes in the queue, set this node to be the first and last property of the queue
+- Otherwise, set the next property of the current last to be that node, and then set the last property of the queue to be that node
+- increment the size of the queue by 1
+
+---
+
+### Dequeue pseudocode
+
+- if there is no first property, just return null
+- store the first property in a variable
+- see if the first is the same as the last (check if there is only 1 node). If so, set the first and last to be null
+- if there is more than 1 node, set the first property to be the next property of first
+- decrement the size by 1
+- return the value of the node dequeued
+
+---
+
+### Big O of Queues
+
+Insertion: **O(1)**
+
+Removal: **O(1)**
+
+Searching: **O(N)**
+
+Access: **O(N)**
+
+---
+
+### Recap
+
+- Queues are a **FIFO** data structure, all elements are first in first out.
+- Queues are useful for processing tasks and are foundational for more complex data structures
+- Insertion and Removal can be done in **O(1)**
+
+---

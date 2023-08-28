@@ -12,9 +12,9 @@
 
 [Stacks](#stacks)
 
-Binary Search Trees
+[Queues](#queues)
 
-Queues
+[Binary Search Trees](#binary-search-trees)
 
 Undirected Unweighted Graphs
 
@@ -754,5 +754,63 @@ Access: **O(N)**
 - Queues are a **FIFO** data structure, all elements are first in first out.
 - Queues are useful for processing tasks and are foundational for more complex data structures
 - Insertion and Removal can be done in **O(1)**
+
+---
+
+## Binary Search Trees
+
+### What is a tree?
+
+A data structure that consists of nodes in a **parent / child** relationship.
+
+Lists - **linear**
+
+Trees - **nonlinear**
+
+---
+
+### Tree terminology
+
+- **Root**: The top node in a tree
+- **Child**: A node directly connected to another node when moving away from the Root.
+- **Parent**: The converse notion of a child.
+- **Siblings**: A group of nodes with the same parent.
+- **Leaf**: A node with no children
+- **Edge**: The connection between one node and another.
+
+---
+
+### Use cases of Trees
+
+- HTML DOM
+- Network Routing
+- Abstract Syntax Trees
+- Artificial Intelligence
+- Folders in Operating Systems
+- Computer File Systems
+
+---
+
+### Kinds of Trees
+
+- Trees
+- Binary Trees
+- Binary Search Trees
+
+In **Binary Search Trees**, each node can have **at most 2 children**.
+
+Also **they are sorted** in some way.
+
+e.g. in BST with numbers, all numbers lower than the root are on the left side, and all numbers greater than the root are on the right side of the root, and you can repeat that on each child node.
+
+---
+
+### How BSTS work
+
+- Every parent node has at most **two** children
+- Every node to the left of a parent node is **always less** than the parent
+- Every node to the right of a parent node is **always greater** than the parent
+
+![BST](img/ds-trees-01.png)
 
 ---

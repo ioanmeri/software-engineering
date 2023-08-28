@@ -868,3 +868,13 @@ class Node {
       - if there is not, we're done searching!
 
 ---
+
+### Big O of BST
+
+Insertion: **O( log n)**
+
+Searching: **O( log n)**
+
+**Not guaranteed!** might be one-sided
+
+---

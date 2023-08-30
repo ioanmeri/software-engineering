@@ -16,6 +16,8 @@
 
 [Binary Search Trees](#binary-search-trees)
 
+[Tree traversal](#tree-traversal)
+
 Undirected Unweighted Graphs
 
 Binary Heaps
@@ -876,5 +878,33 @@ Insertion: **O( log n)**
 Searching: **O( log n)**
 
 **Not guaranteed!** might be one-sided
+
+---
+
+## Tree Traversal
+
+Visit every node once
+
+**Two ways:**
+
+- Breadth-first Search
+- Depth-first Search
+  - DFS - InOrder
+  - DFS - PreOrder
+  - DFS - PostOrder
+
+---
+
+### BFS
+
+**Steps - Iteratively**
+
+- Create a queue (this can be an array) and a variable to store the values of nodes visited
+- Place the root node in the queue
+- Loop as long as there is anything in the queue
+  - Dequeue a node from the queue and push the value of the node into the variable that stores the nodes
+  - if there is a left property on the node dequeued - add it to the queue
+  - if there is a right property on the node dequeued - add it to the queue
+- Return the variable that stores the values
 
 ---

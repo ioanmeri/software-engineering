@@ -1004,3 +1004,38 @@ Binary Heaps are used to implement Priority Queues, which are **very** commonly 
 They are also used quite a bit, with **graph traversal** algorithms.
 
 ---
+
+### Storing Heaps
+
+We can store a heap in an array instead of a Tree Class and Node Class.
+
+![Heaps](img/ds-heaps-01.png)
+
+For any index of an array `n`
+
+The **left child** is stored at `2n + 1`
+
+The **right child** is at `2n + 2`
+
+For any child node at index `n`
+
+Its parent is at index `(n - 1)/2` floored
+
+---
+
+### Heap Insert
+
+- Add to the end
+- Bubble up
+
+#### Insert pseudocode
+
+- push the value into the values property on the heap
+- bubble the
+  - create a variable called index which is the length of the values property -1
+  - create a variable called parentIndex which is the floor of (index - 1)/2
+  - keep looping as long as the values element at the parentIndex is less than the values element at the child index
+    - swap the value of the values element at the parentIndex with the value of the element property at the child index
+    - set the index to be the parentIndex, and start over!
+
+---

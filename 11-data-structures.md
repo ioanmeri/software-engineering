@@ -18,9 +18,9 @@
 
 [Tree traversal](#tree-traversal)
 
-Undirected Unweighted Graphs
+[Binary Heaps](#binary-heaps)
 
-Binary Heaps
+Undirected Unweighted Graphs
 
 Directed Graphs
 
@@ -963,5 +963,44 @@ Visit every node once
 - Binary Trees can have values of any type, but at most two children for each parent
 - Binary Search Trees are a more specific version of binary trees where every node to the left of a parent is less than it's value and every node to the right is greater
 - We can search through Tress using BFS and DFS
+
+---
+
+## Binary Heaps
+
+### Introduction
+
+#### What is a Binary Heap?
+
+**Very** similar to a binary search tree, but with some different rules!
+
+In a **MaxBinaryHeap**, parent nodes are always larger than child nodes. In a **MinBinaryHeap**, parent nodes are always smaller than child nodes.
+
+**Max Binary Heap**
+
+![Stack](img/binary-heaps-01.png)
+
+left and right are not ordered like Binary Search Trees but are **less than the parent**
+
+**Min Binary Heap**
+
+![Stack](img/binary-heaps-02.png)
+
+---
+
+#### Max Binary Heap
+
+- Each parent has at most two child nodes
+- The value of each parent node is **always** greater than its child nodes
+- In a max Binary Heap the parent is greater than the children, but there are not guarantees between sibling nodes
+- A binary heap is as compact as possible. All the children of each node are as full as they can be and left children are filled out first
+
+---
+
+#### Why do we need to know this?
+
+Binary Heaps are used to implement Priority Queues, which are **very** commonly used data structures.
+
+They are also used quite a bit, with **graph traversal** algorithms.
 
 ---

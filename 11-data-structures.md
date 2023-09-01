@@ -20,6 +20,8 @@
 
 [Binary Heaps](#binary-heaps)
 
+[Priority Queue](#priority-queue)
+
 Undirected Unweighted Graphs
 
 Directed Graphs
@@ -1068,5 +1070,69 @@ The procedure for deleting the root from the heap (effectively extracting the ma
   - The child index you swapped to now becomes the new parent index.
   - Keep looping and swapping until neither child is larger than the element.
   - Return the old root!
+
+---
+
+## Priority Queue
+
+### What is a Priority Queue?
+
+A data structure where each element has a priority. Elements with higher priorities are served before elements with lower priorities.
+
+**A naive version**
+
+Use a list to store all elements
+
+```
+priority: 3 priority: 1 priority: 2 priority: 5; priority: 4
+```
+
+Iterate over the entire thing to find the highest priority element
+
+---
+
+### Priority Queue pseudocode
+
+Like a heap:
+
+```
+Class Name:
+  PriorityQueue
+Properties:
+  values = []
+```
+
+But also
+
+```
+Class Name:
+  Node
+Properties:
+  val
+  priority
+```
+
+- Write a Min Binary Heap - lower number means higher priority.
+- Each Node has a val and a priority. Use the priority to build the heap.
+- **Enqueue** method accepts a value and priority, makes a new node, and puts it in the right spot based off of its priority
+- **Dequeue** method removes root element, returns it, and rearranges heap using priority.
+
+---
+
+### Big O of Binary Heaps
+
+Insertion: **O(log N)**
+
+Removal: **O(log N)**
+
+Search: **O(N)**
+
+---
+
+### Recap
+
+- Binary Heaps are very useful data structures for sorting, and implementing other data structures like priority queues
+- Binary Heaps are either MaxBinaryHeaps or MinBinaryHeaps with parents either being smaller or larger than their children
+- With just a little bit of math, we can represent heaps using arrays!
 
 ---

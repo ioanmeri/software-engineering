@@ -1224,7 +1224,9 @@ A function that performs this task is called a **hash function**
 ["orangered", "#ff4500"]: 7
 ```
 
-### Intro to hash functions
+---
+
+#### Intro to hash functions
 
 example of fixed output hash function
 
@@ -1236,7 +1238,9 @@ hash("fsadfasdfdsasfddsfafdfaafsfdsfafdaffdasfdsafdaadsff")
                // -430105209470529753
 ```
 
-### What makes a good Hash?
+---
+
+#### What makes a good Hash?
 
 (not a cryptographically secure one)
 
@@ -1272,5 +1276,65 @@ function randomHash(key){
   return Math.floor(Math.random() * 1000)
 }
 ```
+
+---
+
+### First hash function
+
+```
+hash("pink", 100) // second arg the length of the array
+
+
+function hash(key, arrayLen){
+  let total = 0;
+  for(let char of key){
+    // map "a" to 1, "b" to 2, "c" to 3, etc
+    let value = char.charCodeAt(0) - 96;
+    total = (total + value) % arrayLen;
+  }
+  return total;
+}
+```
+
+---
+
+#### Problems with our current hash
+
+1. Only hashes strings (we won't worry about this)
+
+2. Not constant time - linear in key length
+
+3. Could be a little more random
+
+---
+
+#### Hashing Revisited
+
+```
+function hash(key, arrayLen){
+  let total = 0;
+  let WEIRD_PRIME = 31;
+  for(let i = 0; i < Math.min(key.length, 100); i++){
+    let char = key[i];
+    let value = char.charCodeAt(0) - 96;
+    total = (total*WEIRD_PRIME + value) % arrayLen;
+  }
+  return total;
+}
+```
+
+---
+
+#### Prime numbers? wut.
+
+The prime number in the hash is helpful in spreading out the keys more uniformly.
+
+It's also helpful if the array that you're putting values into has a prime length.
+
+You don't need to know why. (Math is complicated!)
+But here are some links if you're curious.
+
+- Why do hash functions use prime numbers?
+- Does making array size a prime number help in hash table implementation?
 
 ---

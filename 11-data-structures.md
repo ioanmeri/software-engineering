@@ -1369,3 +1369,22 @@ Unlike with separate chaining, this allows us to store a single key-value at eac
 ![Hash table](img/hash-tables-02.png)
 
 ---
+
+### A HashTable Class
+
+#### Set /Get
+
+**set**
+
+1. Accepts a key and a value
+2. Hashes the key
+3. Stores the key-value in the hash table array via separate chaining
+
+**get**
+
+1. Accepts a key
+2. Hashes the key
+3. Retrieves the key-value pair in the hash table
+4. If the key isn't found, returns undefined
+
+---

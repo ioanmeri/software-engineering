@@ -1372,7 +1372,7 @@ Unlike with separate chaining, this allows us to store a single key-value at eac
 
 ### A HashTable Class
 
-#### Set /Get
+#### Set / Get
 
 **set**
 
@@ -1386,5 +1386,17 @@ Unlike with separate chaining, this allows us to store a single key-value at eac
 2. Hashes the key
 3. Retrieves the key-value pair in the hash table
 4. If the key isn't found, returns undefined
+
+---
+
+#### Keys / Values
+
+**keys**
+
+1. Loops through the hash table array and returns an array of keys in the table
+
+**values**
+
+1. Loops through the hash table array and returns an array of values in the table
 
 ---

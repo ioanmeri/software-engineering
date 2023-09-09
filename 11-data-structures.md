@@ -24,6 +24,8 @@
 
 [Hash Tables](#hash-tables)
 
+[Graphs](#graphs)
+
 Undirected Unweighted Graphs
 
 Directed Graphs
@@ -1421,5 +1423,43 @@ Unlike with separate chaining, this allows us to store a single key-value at eac
 - Hash tables store data in a large array, and work by **hashing** the keys
 - A good hash should be fast, distribute keys uniformly, and be deterministic
 - Separate chaining and linear probing are two strategies used to deal with two keys that hash to the same index
+
+---
+
+## Graph
+
+### What are graphs
+
+A **graph data structure** consists of a finite (and possibly mutable) set of vertices or nodes or points, together with a set of unordered pairs of these vertices for an undirected **graph** or a set of ordered pairs for a directed **graph**.
+
+**Nodes** + **Connections**
+
+---
+
+### Uses of graphs
+
+- Social Networks
+- Location / Mapping
+- Routing Algorithms
+- Visual Hierarchy
+- File System Optimizations
+- Recommendations
+  - "People also watched"
+  - "You might also like.."
+  - "People you might know"
+  - "Frequently bought with"
+
+Graph is Free Form, no Pattern like Tree or Linked List.
+
+---
+
+### Types of graphs
+
+#### Essential Graph Terms
+
+- **Vertex** - a node
+- **Edge** - connection between nodes
+- **Weighted/Unweighted** - values assigned to distances between vertices
+- **Directed/Undirected** - directions assigned to distances between vertices
 
 ---
